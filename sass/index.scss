@@ -1,0 +1,348 @@
+@import "./base.scss";
+@import "./normalize.scss";
+html,
+body {
+    height: 100%;
+}
+
+.login {
+    height: 100%;
+    background-color: #00b4ef;
+    padding-top: 100px;
+    .form-login {
+        width: 530px;
+        height: 400px;
+        margin: 0 auto;
+        box-shadow: 0 0 3px #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        padding-top: 30px;
+        h3 {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            font-weight: 900;
+            font-size: 30px
+        }
+        form {
+            margin-top: 60px;
+            padding-left: 84px;
+            .custom {
+                position: relative;
+                input {
+                    padding-left: 30px;
+                    height: 40px;
+                    background-color: #f0f0f0;
+                }
+                .glyphicon-user {
+                    position: absolute;
+                    left: 24px;
+                    top: 12px;
+                    color: #666;
+                }
+            }
+            .pasd {
+                position: relative;
+                input {
+                    padding-left: 30px;
+                    height: 40px;
+                    background-color: #f0f0f0;
+                }
+                .glyphicon-lock {
+                    position: absolute;
+                    left: 24px;
+                    top: 12px;
+                    color: #666;
+                }
+            }
+            .subm {
+                margin-top: 40px;
+                input[type="checkbox"] {
+                    background: red;
+                }
+                .btn-register {
+                    margin-left: 170px;
+                    border-radius: 15px;
+                    a {
+                        display: block;
+                        width: 26px;
+                        ;
+                        height: 20px;
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+                .btn-login {
+                    border-radius: 15px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+//注册
+.register {
+    height: 100%;
+    background-color: #00b4ef;
+    padding-top: 100px;
+    .form-register {
+        width: 530px;
+        height: 500px;
+        margin: 0 auto;
+        box-shadow: 0 0 3px #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        padding-top: 30px;
+        h3 {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            font-weight: 900;
+            font-size: 30px
+        }
+        form {
+            margin-top: 60px;
+            padding-left: 84px;
+            input {
+                padding-left: 30px;
+                height: 40px;
+                background-color: #f0f0f0;
+            }
+            i {
+                position: absolute;
+                left: 24px;
+                top: 12px;
+                color: #666;
+            }
+            .custom {
+                position: relative;
+            }
+            .pasd {
+                position: relative;
+            }
+            .subm {
+                margin-top: 40px;
+                input[type="checkbox"] {
+                    background: red;
+                }
+                .btn-register {
+                    margin-left: 170px;
+                    border-radius: 15px;
+                    a {
+                        display: block; // width: 26px;
+                        height: 20px;
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+                .btn-login {
+                    border-radius: 15px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+//主页
+.main {
+    height: 100%;
+    background-color: #666;
+    display: flex;
+    flex-direction: column;
+    #top-nav {
+        .navbar {
+            background-color: #666;
+            border: none;
+            border-bottom: 1px solid #000;
+            margin-bottom: 0;
+            a {
+                color: #ccc;
+            }
+        }
+    } // 主体内容
+    .content {
+        flex: 1;
+        display: flex; //左侧菜单
+        // height: 100%;
+        .left-menu {
+            width: 200px; // height: 500px;
+            background-color: #666;
+            height: 100%;
+            ul {
+                li {
+                    line-height: 50px;
+                    padding-left: 40px;
+                    cursor: pointer;
+                    color: #ccc;
+                }
+            }
+        } //右侧容器
+        .right-container {
+            flex: 1;
+            background-color: #666;
+            overflow-y: scroll;
+            .changePassword {
+                height: 100%; // margin-top: 50px;
+                background-color: #fff;
+                padding-top: 100px;
+                .form-changePassword {
+                    width: 600px;
+                    height: 300px;
+                    margin: 0 auto;
+                    padding-left: 30px;
+                    h3 {
+                        padding-top: 20px;
+                        padding-right: 51px;
+                    }
+                    form {
+                        margin-top: 50px;
+                        input {
+                            padding-left: 30px;
+                            height: 40px;
+                            background-color: #f0f0f0;
+                            margin-left: 34px;
+                        }
+                        i {
+                            position: absolute;
+                            left: 58px;
+                            top: 12px;
+                            color: #666;
+                        }
+                        button {
+                            &:first-child {
+                                width: 80px;
+                                margin-left: 30px;
+                                a {
+                                    color: #fff;
+                                    text-decoration: none;
+                                }
+                            }
+                            &:last-child {
+                                width: 80px;
+                                margin-right: 66px;
+                            }
+                        }
+                    }
+                }
+            } // 个人中心
+            #personal-file {
+                //    width: 100%;
+                //    height: 100%;
+                background-color: #fff;
+                top: 51px;
+                left: 200px;
+                .modal-dialog {
+                    margin-top: 165px;
+                }
+            } //新闻操作
+            #newsControl {
+                padding-top: 30px;
+                height: 100%;
+                background-color: #fff;
+                .search {
+                    .input-group {
+                        width: 75%;
+                        margin: 0 auto;
+                        .input-group-addon {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .lis {
+                    margin-top: 36px;
+                    height: 100%;
+                    // overflow-y: scroll; 
+                    // overflow: hidden;
+                    background-color: #fff;
+                    ul {
+                        li {
+                            line-height: 50px;
+                            border-bottom: 1px dashed #000;
+                            padding-left: 20px;
+                          .cont {
+                                h3 {
+                                    padding-top: 15px;
+                            }
+                            p {
+                                
+                            }
+                            button {
+                                margin-top: -60px;
+                                &:first-of-type {
+                                    margin-right: 30px;
+                                }
+                                &:last-of-type {
+                                    margin-right: 100px;
+                                    
+                                }
+                            }
+                          }
+                        }
+                    }
+                  .pageBt {
+                            padding-left: 50%; 
+                           margin-left: -160px;
+                           padding-top: 20px;
+                        ol {
+                            li {
+                                cursor: pointer;
+                                width: 30px;
+                                height: 30px;
+                                text-align: center;
+                                line-height: 30px;
+                                float: left;
+                                border: 1px solid #000;
+                            }
+                        }
+                    }
+                }
+                  
+            } 
+            //添加新闻
+            #addNews {
+                height: 100%; //    background-color: red;
+                overflow-y: scroll;
+                margin-bottom: 0;
+                form {
+                    .form-group {
+                         #addUe {
+                    #edui1 {
+                        #edui1_iframeholder {
+                            height: 400px !important;
+                            iframe {
+                                #ueditor_0 {}
+                            }
+                        }
+                    }
+                }
+                select {
+                    height: 30px;
+                        color: #ccc;
+                    option {
+                    }
+                }
+                    }
+                }
+            }
+
+// #newsControl {
+
+
+
+
+
+
+
+// }
+
+
+
+
+
+
+
+
+
+        } //右侧容器分界
+    }
+}

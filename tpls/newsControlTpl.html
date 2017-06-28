@@ -1,0 +1,30 @@
+<div id="newsControl">
+    <div class="search">
+        <div class="input-group">
+            <input type="text" class="form-control keyword" placeholder="输入关键字" aria-describedby="basic-addon2">
+            <span class="input-group-addon" id="basic-addon2">搜索</span>
+        </div>
+    </div>
+    <div class="lis">
+        <ul>
+            {{each datas tit}}
+            <li>
+                <div class="cont">
+                    <h3>{{tit.title}}</h3>
+                    <p>{{tit.describes}}</p>
+                    <button class="btn btn-primary pull-right">删除</button>
+                    <button class="btn btn-success pull-right">修改</button>
+                </div>
+            </li>
+             {{/each}}
+        </ul>
+          <div class="pageBt">
+            <ol class="pageControlBtn">
+                {{each pageCount pag}}
+                    <li>{{pag.peg}}</li>
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+   
+</div>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="register">
+        <div class="form-register">
+            <h3 class="text-center">用户注册</h3>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-sm-10 custom">
+                        <input type="email" name="account" class="form-control user-namereg" placeholder="注册电子邮箱">
+                        <i class="glyphicon glyphicon-user"></i>
+                    </div>
+                </div>
+                <div class="form-group pasd">
+                    <div class="col-sm-10">
+                        <input type="password" name="password" class="form-control userpwd" placeholder="密码">
+                        <i class="glyphicon glyphicon-lock"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="email" name="repassword" class="form-control" placeholder="重复密码">
+                        <i class="glyphicon glyphicon-lock"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="email" name="usphone" class="form-control" placeholder="手机号码">
+                        <i class="glyphicon glyphicon-earphone"></i>
+                    </div>
+                </div>
+                <div class="subm">
+                    <button class="btn btn-success btn-register"><a href="login.html">已有账号>>登录</a></button>
+                    <button type="submit" class="btn btn-danger btn-login">注册</button>
+                </div>
+        </div>
+        </form>
+    </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/lib/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="./js/lib/jquery.cookie.js"></script>
+<script type="text/javascript">
+    console.log($);
+    // $(".btn-register").hover(function(){
+    //     alert(1);
+    // })
+    var userPwd = $(".userpwd").val();
+    // $(".userpwd").click(function(){
+    //     alert(userPwd)
+    // })
+    var userName = $(".user-namereg").val();
+    $(".user-namereg").on("keyup", function () {
+        // alert(0)
+        userName = $(this).val();
+        // console.log(userName);   
+        // var  = /\w+@/
+        var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+        // console.log(reg.test($(this).val()));
+        if (reg.test(userName)) {
+            $.ajax({
+                url: "http://127.0.0.1:9090/api/hasregist",
+                type: "get",
+                data: {
+                    account: "userName",
+                },
+                success: function (data) {
+                    if (data) {
+                        // alert(2)
+                    }
+                    console.log(data);
+                }
+            })
+        }
+    })
+
+    // alert(1);
+
+    // console.log(formData);
+        $("form").on("submit", function () {
+         var formData = $(this).serialize();
+            console.log(userName);
+            console.log(userPwd);
+            console.log(formData)
+         if (userName) {
+            
+            $.ajax({
+                url: "http://127.0.0.1:9090/api/regist",
+                data: formData,
+                success: function (data) {
+                    if (data == "true") {
+                        alert("注册成功");
+                        window.location.href = "login.html";
+                    }
+                    console.log(data);
+                }
+            });
+    }
+                return false;
+        })
+</script>
+
+</html>
