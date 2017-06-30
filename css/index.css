@@ -634,7 +634,6 @@ body {
       -ms-flex: 1;
           flex: 1;
   background-color: #666;
-  overflow-y: scroll;
 }
 .main .content .right-container .changePassword {
   height: 100%;
@@ -690,6 +689,8 @@ body {
   padding-top: 30px;
   height: 100%;
   background-color: #fff;
+  overflow-y: scroll;
+  padding-bottom: 20px;
 }
 .main .content .right-container #newsControl .search .input-group {
   width: 75%;
@@ -703,26 +704,26 @@ body {
   height: 100%;
   background-color: #fff;
 }
-.main .content .right-container #newsControl .lis ul li {
+.main .content .right-container #newsControl .lis .newsList li {
   line-height: 50px;
   border-bottom: 1px dashed #000;
   padding-left: 20px;
 }
-.main .content .right-container #newsControl .lis ul li .cont h3 {
+.main .content .right-container #newsControl .lis .newsList li .cont h3 {
   padding-top: 15px;
 }
-.main .content .right-container #newsControl .lis ul li .cont button {
+.main .content .right-container #newsControl .lis .newsList li .cont button {
   margin-top: -60px;
 }
-.main .content .right-container #newsControl .lis ul li .cont button:first-of-type {
+.main .content .right-container #newsControl .lis .newsList li .cont button:first-of-type {
   margin-right: 30px;
 }
-.main .content .right-container #newsControl .lis ul li .cont button:last-of-type {
+.main .content .right-container #newsControl .lis .newsList li .cont button:last-of-type {
   margin-right: 100px;
 }
 .main .content .right-container #newsControl .lis .pageBt {
   padding-left: 50%;
-  margin-left: -160px;
+  margin-left: -260px;
   padding-top: 20px;
 }
 .main .content .right-container #newsControl .lis .pageBt ol li {
@@ -733,6 +734,7 @@ body {
   line-height: 30px;
   float: left;
   border: 1px solid #000;
+  margin-right: 10px;
 }
 .main .content .right-container #addNews {
   height: 100%;

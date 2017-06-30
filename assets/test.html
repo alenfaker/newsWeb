@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./kindeditor/themes/default/default.css" />
+    <link rel="stylesheet" href="./kindeditor/plugins/code/prettify.css" />
+
+</head>
+
+<body>
+    <textarea id="editor_id" name="content" style="width:700px;height:300px;">
+&lt;strong&gt;HTML内容&lt;/strong&gt;
+</textarea>
+
+    <script charset="utf-8" src="./kindeditor/kindeditor.js"></script>
+    <script charset="utf-8" src="./kindeditor/lang/zh_CN.js"></script>
+    <script charset="utf-8" src="./kindeditor/plugins/code/prettify.js"></script>
+</body>
+<script type="text/javascript" src="">
+    // 富文本编辑器
+    var editor = null;
+    KindEditor.ready(function (K) {
+                window.editor = K.create('editor_id');
+                var options = {
+                    cssPath: '/css/index.css',
+                    filterMode: true
+                };
+                editor = K.create('textarea[name="content"]', {
+                    themeType: 'simple',
+                    resizeType: 1,
+                    allowFileManager: true,
+                    afterBlur: function () {
+                        this.sync();
+                    }
+                });
+    })
+</script>
+
+</html>

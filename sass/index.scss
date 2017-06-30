@@ -180,7 +180,7 @@ body {
         .right-container {
             flex: 1;
             background-color: #666;
-            overflow-y: scroll;
+            // overflow-y: scroll;
             .changePassword {
                 height: 100%; // margin-top: 50px;
                 background-color: #fff;
@@ -239,6 +239,8 @@ body {
                 padding-top: 30px;
                 height: 100%;
                 background-color: #fff;
+                overflow-y: scroll;
+                padding-bottom: 20px;
                 .search {
                     .input-group {
                         width: 75%;
@@ -254,7 +256,7 @@ body {
                     // overflow-y: scroll; 
                     // overflow: hidden;
                     background-color: #fff;
-                    ul {
+                    .newsList {
                         li {
                             line-height: 50px;
                             border-bottom: 1px dashed #000;
@@ -281,7 +283,7 @@ body {
                     }
                   .pageBt {
                             padding-left: 50%; 
-                           margin-left: -160px;
+                           margin-left: -260px;
                            padding-top: 20px;
                         ol {
                             li {
@@ -292,9 +294,10 @@ body {
                                 line-height: 30px;
                                 float: left;
                                 border: 1px solid #000;
+                                margin-right: 10px;
                             }
                         }
-                    }
+                  s;dbm;lfmsr;kjg;es  }
                 }
                   
             } 

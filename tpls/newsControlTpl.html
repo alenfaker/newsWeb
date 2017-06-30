@@ -6,14 +6,14 @@
         </div>
     </div>
     <div class="lis">
-        <ul>
+        <ul class="newsList">
             {{each datas tit}}
             <li>
-                <div class="cont">
+                <div class="cont" data-date={{tit.date}}>
                     <h3>{{tit.title}}</h3>
                     <p>{{tit.describes}}</p>
-                    <button class="btn btn-primary pull-right">删除</button>
-                    <button class="btn btn-success pull-right">修改</button>
+                    <button class="btnDel btn btn-primary pull-right">删除</button>
+                    <button class="btnEdit btn btn-success pull-right">修改</button>
                 </div>
             </li>
              {{/each}}

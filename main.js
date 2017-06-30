@@ -8,17 +8,15 @@ require.config({
        artTemplate: "./lib/template-web",
        text:  "./lib/text",
        tpl: "../tpls",
-       //UE主文件
-       UEconfig: "../assets/UEditor/ueditor.config",
-       UEditor: "../assets/UEditor/ueditor.all.min",
-       //UE副文件
+       kindeditor: "../assets/kindeditor/kindeditor",
+       kindeditorLang: "../assets/kindeditor/lang/zh_CN",
     },
     shim: {
-        bootstrap: {
+        bootstrap: {    
             deps: ["jquery"],
         },
-        UEditor: {
-             deps: ["UEconfig"]
+        kindeditorLang: {
+             deps: ["kindeditor"]
         }
     }
 }
